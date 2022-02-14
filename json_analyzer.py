@@ -96,8 +96,6 @@ It's raw length is {len(json.dumps(self.json_object))} symbols")
                 self.whole_path.pop()
                 break
 
-            print(f'Opening {object_name}["{key}"]')
-
             key_parsed = key
             if type(obj) is not dict:
                 key_parsed = int(key_parsed)
