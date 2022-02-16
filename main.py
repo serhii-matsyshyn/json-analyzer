@@ -50,7 +50,7 @@ def exception_handler(function: Callable,
         print(f"Detailed error: {err}")
 
 
-def make_films_map(args: argparse.Namespace):
+def main_function(args: argparse.Namespace):
     """ Analyze by JsonAnalyzer by provided argparse.Namespace """
     JsonAnalyzer(json_filename=args.json_filename,
                  json_string=args.json_string).main()
@@ -59,7 +59,7 @@ def make_films_map(args: argparse.Namespace):
 def main():
     """ Main function of the program """
     args = parse_args()
-    exception_handler(make_films_map, args)
+    exception_handler(main_function, args)
 
 
 if __name__ == '__main__':
